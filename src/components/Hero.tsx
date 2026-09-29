@@ -187,11 +187,15 @@ export default function Hero({ onQuickAdd }: HeroProps) {
               </div>
 
               {/* Can Image Showcase */}
-              <div className="relative w-full h-[320px] my-auto flex items-center justify-center animate-float">
+              <div
+                style={{ position: "relative", width: "100%", height: "320px", display: "flex", alignItems: "center", justifyContent: "center" }}
+                className="animate-float"
+              >
                 <Image
                   src="/hero_can.png"
                   alt="FIZZORA Craft Soda Can"
                   fill
+                  sizes="(max-width: 768px) 100vw, 340px"
                   style={{ objectFit: "contain" }}
                   priority
                   className="drop-shadow-[0_25px_35px_rgba(0,242,254,0.35)]"

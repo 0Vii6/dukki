@@ -143,11 +143,15 @@ export default function FlavorSelector({ onAddFlavor, onThemeChange }: FlavorSel
               className="absolute w-[300px] h-[300px] rounded-full blur-3xl opacity-40 transition-all duration-700"
               style={{ backgroundColor: activeFlavor.color }}
             />
-            <div className="relative w-full max-w-[280px] aspect-[3/4] animate-float">
+            <div
+              style={{ position: "relative", width: "100%", height: "300px", display: "flex", alignItems: "center", justifyContent: "center" }}
+              className="animate-float"
+            >
               <Image
                 src={activeFlavor.image}
                 alt={activeFlavor.name}
                 fill
+                sizes="(max-width: 768px) 100vw, 300px"
                 style={{ objectFit: "contain" }}
                 className="drop-shadow-2xl transition-all duration-500"
               />
